@@ -37,7 +37,6 @@ export default {
     gap: 1rem;
 
     h1 {
-      font-weight: normal;
       font-size: 3rem;
     }
   }

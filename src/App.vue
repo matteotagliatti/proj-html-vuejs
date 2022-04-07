@@ -40,6 +40,12 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
 .btn {
   display: flex;
   justify-content: center;
