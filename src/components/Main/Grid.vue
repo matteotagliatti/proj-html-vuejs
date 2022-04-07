@@ -117,6 +117,7 @@ export default {
   row-gap: 4rem;
   column-gap: 2rem;
   height: 35rem;
+  margin-bottom: 10rem;
 
   div {
     img {
