@@ -8,6 +8,20 @@
         <p>{{ element.para }}</p>
       </div>
     </div>
+    <!-- Grid courses -->
+    <div class="grid-courses">
+      <div
+        v-for="(course, index) in courseElements"
+        :key="index"
+        :class="index === 0 ? 'span-2' : ''"
+      >
+        <img :src="course.img" :alt="course.title" />
+        <div class="course-text">
+          <h3>{{ course.title }}</h3>
+          <p>{{ course.number }} Courses</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,6 +47,38 @@ export default {
           para: "Online post-graduate certificates are a popular way to develop your professional qualifications of Masterstudy.",
         },
       ],
+      courseElements: [
+        {
+          img: require("../../assets/img/cat_1-770x375.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+        {
+          img: require("../../assets/img/cat_2-544x322.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+        {
+          img: require("../../assets/img/cat_3-740x310.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+        {
+          img: require("../../assets/img/cat_4-740x310.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+        {
+          img: require("../../assets/img/cat_5-740x310.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+        {
+          img: require("../../assets/img/cat_6-740x310.jpg"),
+          title: "Software Development",
+          number: "5",
+        },
+      ],
     };
   },
 };
@@ -45,6 +91,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
+  margin-bottom: 6rem;
 
   div {
     background-color: $lightblue;
@@ -60,6 +107,32 @@ export default {
     p {
       opacity: 0.5;
     }
+  }
+}
+
+.grid-courses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  row-gap: 4rem;
+  column-gap: 2rem;
+  height: 35rem;
+
+  div {
+    img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-text {
+      @include flex(row, space-between, center);
+    }
+  }
+
+  .span-2 {
+    grid-column: span 2;
+    grid-row: span 2;
   }
 }
 </style>
