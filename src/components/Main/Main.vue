@@ -1,16 +1,19 @@
 <template>
   <div>
     <JumbotronDiv />
+    <GridDiv />
   </div>
 </template>
 
 <script>
 import JumbotronDiv from "./Jumbotron.vue";
+import GridDiv from "./Grid.vue";
 
 export default {
   name: "MainDiv",
   components: {
     JumbotronDiv,
+    GridDiv,
   },
 };
 </script>
