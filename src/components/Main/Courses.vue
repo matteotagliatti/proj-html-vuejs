@@ -50,6 +50,9 @@
         </div>
       </div>
     </div>
+    <div>
+      <a class="btn">Show All</a>
+    </div>
   </div>
 </template>
 
@@ -176,6 +179,11 @@ h1 {
   margin-bottom: 3rem;
 }
 
+.btn {
+  margin: 0 auto;
+  width: 8rem;
+}
+
 .categories {
   @include flex(row, center, center);
   gap: 3rem;
@@ -195,6 +203,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 2rem;
+  margin-bottom: 3rem;
 
   .grid-element {
     border: 1px solid $anthensgray;
