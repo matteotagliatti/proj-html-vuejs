@@ -1,9 +1,38 @@
 <template>
   <div>
     <div class="header-container">
-      <!-- Logo -->
       <div class="bottom-header">
+        <!-- Logo -->
         <img src="../../assets/img/MasterStudy_logo.svg" alt="" />
+        <!-- Category + Search -->
+        <div class="cat-search">
+          <div class="category">
+            <i class="fa-solid fa-grip-lines"></i><span>Category</span>
+          </div>
+          <div class="input">
+            <input type="text" />
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Icons + Text -->
+        <div class="icons-text">
+          <div v-for="(element, index) in iconText" :key="index">
+            <i class="fa-solid" :class="element.icon"></i
+            ><span>{{ element.text }}</span>
+          </div>
+        </div>
+        <!-- Log In + Sign Up -->
+        <div class="login-signup">
+          <div class="login">
+            <i class="fa-solid fa-user"></i><span>Log In</span>
+          </div>
+          <div class="signup">Sign Up</div>
+          <div>
+            <i class="fa-solid fa-bookmark"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -12,7 +41,108 @@
 <script>
 export default {
   name: "BottomHeader",
+  data() {
+    return {
+      iconText: [
+        {
+          text: "Become an instructor",
+          icon: "fa-bullhorn",
+        },
+        {
+          text: "For Enterprise",
+          icon: "fa-suitcase",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "../../assets/style/style.scss";
+
+.bottom-header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .cat-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .category {
+      opacity: 0.5;
+      display: flex;
+      gap: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    .input {
+      display: flex;
+
+      input {
+        width: 20rem;
+        border: none;
+        color: black;
+        background-color: $anthensgray;
+        padding: 0.5rem;
+      }
+
+      div {
+        padding: 0.9rem 1.3rem;
+        background-color: $denim;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .icons-text {
+    display: flex;
+    gap: 1.5rem;
+
+    div {
+      display: flex;
+      gap: 0.5rem;
+
+      i {
+        color: $denim;
+      }
+    }
+  }
+
+  .login-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: $denim;
+
+    .login {
+      color: $denim;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .signup {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      background-color: $denim;
+      border-radius: 1.3rem;
+      padding: 0.7rem;
+    }
+  }
+}
+</style>

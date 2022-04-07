@@ -22,7 +22,9 @@ export default {
 @import "../../assets/style/style.scss";
 
 .header-container {
-  width: 1400px;
+  max-width: 1600px;
+  min-width: 1000px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 </style>
