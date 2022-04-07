@@ -268,7 +268,7 @@ h1 {
             position: absolute;
             top: -0.8rem;
             right: 0;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: grey;
           }
         }
