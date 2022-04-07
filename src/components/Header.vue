@@ -1,30 +1,36 @@
 <template>
-  <div class="container">
-    <!-- Top -->
-    <div class="top-header">
-      <!-- Left -->
-      <div><span>English</span><i class="fa-solid fa-chevron-down"></i></div>
-      <!-- Right -->
-      <div>
-        <!-- Link -->
+  <div class="mb">
+    <div class="container">
+      <!-- Top -->
+      <div class="top-header">
+        <!-- Left -->
         <div>
-          <ul>
-            <li v-for="(link, index) in topHeaderLinks" :key="index">
-              <a :href="link.url">{{ link.name }}</a>
-            </li>
-          </ul>
+          <span class="lang">English</span
+          ><i class="fa-solid fa-chevron-down"></i>
         </div>
-        <!-- Icons -->
-        <div>
-          <font-awesome-icon
-            v-for="(icon, index) in topHeaderIcons"
-            :icon="icon"
-            :key="index"
-          />
+        <!-- Right -->
+        <div class="right">
+          <!-- Link -->
+          <div>
+            <ul>
+              <li v-for="(link, index) in topHeaderLinks" :key="index">
+                <a :href="link.url">{{ link.name }}</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Icons -->
+          <div class="icons">
+            <i
+              v-for="(icon, index) in topHeaderIcons"
+              class="fa-brands"
+              :class="icon"
+              :key="index"
+            ></i>
+          </div>
         </div>
       </div>
+      <!-- Bottom -->
     </div>
-    <!-- Bottom -->
   </div>
 </template>
 
@@ -63,15 +69,29 @@ export default {
           url: "#",
         },
       ],
-      topHeaderIcons: ["twitter", "instagram"],
+      topHeaderIcons: [
+        "fa-twitter",
+        "fa-instagram",
+        "fa-behance",
+        "fa-dribbble",
+        "fa-git",
+        "fa-linkedin",
+        "fa-pinterest",
+      ],
     };
   },
 };
 </script>
 
 <style scoped lang="scss">
+@import "../assets/style/style.scss";
+
+.mb {
+  border-bottom: 1px solid $anthensgray;
+}
+
 .container {
-  width: 1140px;
+  width: 1400px;
   margin: 0 auto;
 }
 
@@ -82,8 +102,10 @@ export default {
   padding: 1rem 0;
 
   a,
-  span {
-    opacity: 0.5;
+  span,
+  i {
+    opacity: 0.6;
+    font-size: 0.9rem;
   }
 
   ul {
@@ -98,6 +120,22 @@ export default {
 
     a {
       color: black;
+    }
+  }
+
+  .lang {
+    margin-right: 0.7rem;
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+
+    .icons {
+      display: flex;
+      gap: 1rem;
     }
   }
 }
