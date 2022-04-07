@@ -1,6 +1,6 @@
 <template>
   <div class="mb">
-    <div class="header-container">
+    <div class="large-container">
       <div class="top-header">
         <!-- Left -->
         <div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header-container">
+    <div class="large-container">
       <div class="bottom-header">
         <!-- Logo -->
         <img src="../../assets/img/MasterStudy_logo.svg" alt="" />

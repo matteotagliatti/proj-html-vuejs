@@ -20,11 +20,4 @@ export default {
 
 <style lang="scss">
 @import "../../assets/style/style.scss";
-
-.header-container {
-  max-width: 1600px;
-  min-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
 </style>

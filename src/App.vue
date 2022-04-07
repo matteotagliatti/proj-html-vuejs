@@ -57,4 +57,17 @@ h3 {
   border-radius: 1.3rem;
   padding: 0.7rem 1.2rem;
 }
+
+.large-container {
+  max-width: 1600px;
+  min-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  min-width: 900px;
+  margin: 0 auto;
+}
 </style>
