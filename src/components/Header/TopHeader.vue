@@ -90,9 +90,7 @@ export default {
 }
 
 .top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center);
   padding: 1rem 0;
 
   a,
@@ -103,9 +101,7 @@ export default {
   }
 
   ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex(row, flex-end, center);
     gap: 2rem;
   }
 
@@ -134,9 +130,7 @@ export default {
   }
 
   .right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex(row, flex-end, center);
     gap: 3rem;
 
     .icons {

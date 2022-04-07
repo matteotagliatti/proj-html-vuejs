@@ -28,7 +28,7 @@
           <div class="login">
             <i class="fa-solid fa-user"></i><span>Log In</span>
           </div>
-          <div class="signup">Sign Up</div>
+          <div class="btn">Sign Up</div>
           <div>
             <i class="fa-solid fa-bookmark"></i>
           </div>
@@ -63,14 +63,10 @@ export default {
 
 .bottom-header {
   padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center);
 
   .cat-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center);
     gap: 1rem;
 
     .category {
@@ -94,9 +90,7 @@ export default {
       div {
         padding: 0.9rem 1.3rem;
         background-color: $denim;
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        @include flex(row, center, center);
 
         i {
           color: white;
@@ -120,9 +114,7 @@ export default {
   }
 
   .login-signup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center);
     gap: 1.5rem;
     color: $denim;
 
@@ -130,18 +122,6 @@ export default {
       color: $denim;
       display: flex;
       gap: 0.5rem;
-    }
-
-    .signup {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: white;
-      background-color: $denim;
-      border-radius: 1.3rem;
-      padding: 0.7rem;
     }
   }
 }
