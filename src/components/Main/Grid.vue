@@ -55,27 +55,27 @@ export default {
         },
         {
           img: require("../../assets/img/cat_2-544x322.jpg"),
-          title: "Software Development",
-          number: "5",
+          title: "Art",
+          number: "8",
         },
         {
           img: require("../../assets/img/cat_3-740x310.jpg"),
-          title: "Software Development",
+          title: "Material Design",
           number: "5",
         },
         {
           img: require("../../assets/img/cat_4-740x310.jpg"),
-          title: "Software Development",
+          title: "Music",
           number: "5",
         },
         {
           img: require("../../assets/img/cat_5-740x310.jpg"),
-          title: "Software Development",
+          title: "Exercise",
           number: "5",
         },
         {
           img: require("../../assets/img/cat_6-740x310.jpg"),
-          title: "Software Development",
+          title: "Photography",
           number: "5",
         },
       ],
