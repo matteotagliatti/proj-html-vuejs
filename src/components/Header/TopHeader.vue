@@ -14,6 +14,7 @@
             <ul>
               <li v-for="(link, index) in topHeaderLinks" :key="index">
                 <a :href="link.url">{{ link.name }}</a>
+                <div v-if="index === 2 || index === 4">New</div>
               </li>
             </ul>
           </div>
@@ -110,6 +111,18 @@ export default {
 
   li {
     list-style: none;
+    position: relative;
+
+    div {
+      position: absolute;
+      color: white;
+      background-color: $red;
+      padding: 0.2rem;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      top: -1rem;
+      right: -0.5rem;
+    }
 
     a {
       color: black;
