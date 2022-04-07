@@ -248,7 +248,6 @@ h1 {
         @include flex(row, space-between, center);
 
         .hours {
-          font-size: 0.8rem;
           opacity: 0.5;
         }
 
