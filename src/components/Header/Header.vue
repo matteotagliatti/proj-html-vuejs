@@ -23,7 +23,7 @@ export default {
 
 .header-container {
   max-width: 1600px;
-  min-width: 1000px;
+  min-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }

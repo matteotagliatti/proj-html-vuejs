@@ -21,6 +21,7 @@ export default {
 <style lang="scss">
 .container {
   max-width: 1100px;
+  min-width: 900px;
   margin: 0 auto;
 }
 </style>
