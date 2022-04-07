@@ -1,7 +1,6 @@
 <template>
   <div class="mb">
-    <div class="container">
-      <!-- Top -->
+    <div class="header-container">
       <div class="top-header">
         <!-- Left -->
         <div>
@@ -29,14 +28,13 @@
           </div>
         </div>
       </div>
-      <!-- Bottom -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HeaderDiv",
+  name: "TopHeader",
   data() {
     return {
       topHeaderLinks: [
@@ -84,15 +82,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/style.scss";
+@import "../../assets/style/style.scss";
 
 .mb {
   border-bottom: 1px solid $anthensgray;
-}
-
-.container {
-  width: 1400px;
-  margin: 0 auto;
 }
 
 .top-header {
