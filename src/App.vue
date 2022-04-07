@@ -8,8 +8,8 @@
 
 <script>
 import HeaderDiv from "./components/Header/Header.vue";
-import MainDiv from "./components/Main.vue";
-import FooterDiv from "./components/Footer.vue";
+import MainDiv from "./components/Main/Main.vue";
+import FooterDiv from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/style/style.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,5 +38,17 @@ export default {
 
 a {
   text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background-color: $denim;
+  border-radius: 1.3rem;
+  padding: 0.7rem 1.2rem;
 }
 </style>
