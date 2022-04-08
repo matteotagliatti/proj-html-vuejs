@@ -80,6 +80,10 @@ export default {
       .text,
       .input {
         width: 100%;
+
+        .input-field {
+          width: 100%;
+        }
       }
     }
   }

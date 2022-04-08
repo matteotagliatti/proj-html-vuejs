@@ -57,7 +57,7 @@ export default {
       about: {
         title: "About",
         desc: `Masterstudy is Education WordPress theme featured by Learning
-          Management System (LMS) for online education.<br />Developed by
+          Management System (LMS) for online education. Developed by
           Stylemix Themes`,
         icons: ["fa-facebook", "fa-twitter", "fa-instagram"],
       },
@@ -175,13 +175,26 @@ footer {
   }
 }
 
-@include md {
+@include lg {
   footer {
     .container {
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
       .column {
         margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@include md {
+  footer {
+    .container {
+      .column {
+        .list {
+          flex-direction: column;
+          gap: 0;
+        }
       }
     }
   }

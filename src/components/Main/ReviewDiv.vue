@@ -74,6 +74,11 @@ export default {
     .container {
       div {
         width: 100%;
+        padding: 2rem;
+
+        i {
+          display: none;
+        }
       }
     }
   }

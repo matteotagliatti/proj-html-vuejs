@@ -25,4 +25,9 @@
   @media (max-width: map-get($breakpoints, "xl")) {
     @content;
   }
-} ;
+}
+@mixin xxl {
+  @media (max-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}

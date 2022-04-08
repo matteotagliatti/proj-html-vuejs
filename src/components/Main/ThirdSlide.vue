@@ -46,7 +46,7 @@ export default {
   .large-container {
     @include flex(row, space-between, center);
     gap: 2rem;
-    padding: 0;
+    padding: 0 2rem;
 
     .single-slide {
       border: 1px solid $anthensgray;
@@ -84,10 +84,6 @@ export default {
   .slide {
     .large-container {
       flex-direction: column;
-
-      .single-slide {
-        margin: 0 2rem;
-      }
     }
   }
 }

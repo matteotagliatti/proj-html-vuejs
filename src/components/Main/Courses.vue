@@ -189,10 +189,12 @@ h1 {
 
 .categories {
   @include flex(row, center, center);
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 1rem;
   padding: 0 10rem;
   color: $denim;
   margin: 3rem;
+  flex-wrap: wrap;
 
   .active {
     padding: 0.7rem 1rem;
@@ -238,19 +240,21 @@ h1 {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
 
-@include md {
   .categories {
-    flex-wrap: wrap;
-    padding: 0;
+    padding: 0 2rem;
     gap: 1rem;
   }
 }
 
-@include sm {
+@include md {
   .grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .categories {
+    padding: 0;
+    gap: 1rem;
   }
 }
 </style>
