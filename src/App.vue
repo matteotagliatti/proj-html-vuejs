@@ -56,6 +56,11 @@ h3 {
   background-color: $denim;
   border-radius: 1.3rem;
   padding: 0.7rem 1.2rem;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: $shamrock;
+    cursor: pointer;
+  }
 }
 
 .large-container {

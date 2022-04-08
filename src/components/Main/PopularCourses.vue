@@ -150,6 +150,11 @@ p {
     border: 1px solid $anthensgray;
     text-align: left;
     background-color: white;
+    transition: box-shadow 0.5s;
+    &:hover {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+      cursor: pointer;
+    }
 
     .image-container {
       height: 10rem;
@@ -228,6 +233,14 @@ p {
     padding: 1rem 1.2rem;
     background-color: white;
     border: 1px solid $anthensgray;
+    &:hover {
+      background-color: $william;
+      color: white;
+      cursor: pointer;
+    }
+    &:hover i {
+      opacity: 1;
+    }
 
     i {
       opacity: 0.5;

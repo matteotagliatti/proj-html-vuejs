@@ -207,6 +207,11 @@ h1 {
   .grid-element {
     border: 1px solid $anthensgray;
     text-align: left;
+    transition: box-shadow 0.5s;
+    &:hover {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+      cursor: pointer;
+    }
 
     .image-container {
       height: 10rem;

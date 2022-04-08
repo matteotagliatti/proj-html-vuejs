@@ -98,6 +98,14 @@ export default {
     padding: 2rem;
     @include flex(column, flex-start, flex-start);
     gap: 1rem;
+    transition: box-shadow 0.5s;
+    &:hover {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+      cursor: pointer;
+    }
+    &:hover p {
+      opacity: 1;
+    }
 
     i {
       color: $denim;
@@ -106,6 +114,7 @@ export default {
 
     p {
       opacity: 0.5;
+      transition: opacity 0.5s;
     }
   }
 }
