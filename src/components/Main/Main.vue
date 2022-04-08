@@ -7,6 +7,7 @@
     <SecondSlide />
     <NewsletterDiv />
     <PopularCoursesDiv />
+    <ThirdSlide />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import CoursesDiv from "./Courses.vue";
 import SecondSlide from "./SecondSlide.vue";
 import NewsletterDiv from "./Newsletter.vue";
 import PopularCoursesDiv from "./PopularCourses.vue";
+import ThirdSlide from "./ThirdSlide.vue";
 
 export default {
   name: "MainDiv",
@@ -29,6 +31,7 @@ export default {
     SecondSlide,
     NewsletterDiv,
     PopularCoursesDiv,
+    ThirdSlide,
   },
 };
 </script>
