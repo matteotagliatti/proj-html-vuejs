@@ -69,7 +69,7 @@ export default {
   }
 }
 
-@include md {
+@include lg {
   .review {
     .container {
       div {

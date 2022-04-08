@@ -13,7 +13,7 @@
         <span>Your e-mail adress</span>
         <div class="input-field">
           <input type="text" placeholder="Your e-mail adress" />
-          <button class="btn">Subscribe</button>
+          <a class="btn">Subscribe</a>
         </div>
       </div>
     </div>
@@ -64,8 +64,11 @@ export default {
           width: 17rem;
         }
 
-        button {
+        a {
           border-radius: 0;
+          &:hover {
+            background-color: $william;
+          }
         }
       }
     }
