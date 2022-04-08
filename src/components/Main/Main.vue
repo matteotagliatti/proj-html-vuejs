@@ -3,10 +3,10 @@
     <JumbotronDiv />
     <GridDiv />
     <FirstSlide />
-    <CoursesDiv />
+    <CoursesDiv :info="allCourses" />
     <SecondSlide />
     <NewsletterDiv />
-    <PopularCoursesDiv />
+    <CoursesDiv :info="popularCourses" />
     <ThirdSlide />
     <ReviewDiv />
   </div>
@@ -19,7 +19,6 @@ import FirstSlide from "./FirstSlide.vue";
 import CoursesDiv from "./Courses.vue";
 import SecondSlide from "./SecondSlide.vue";
 import NewsletterDiv from "./Newsletter.vue";
-import PopularCoursesDiv from "./PopularCourses.vue";
 import ThirdSlide from "./ThirdSlide.vue";
 import ReviewDiv from "./ReviewDiv.vue";
 
@@ -32,9 +31,20 @@ export default {
     CoursesDiv,
     SecondSlide,
     NewsletterDiv,
-    PopularCoursesDiv,
     ThirdSlide,
     ReviewDiv,
+  },
+  data() {
+    return {
+      allCourses: {
+        title: "Recent courses",
+        bg: "white",
+      },
+      popularCourses: {
+        title: "Popular courses",
+        bg: "$backgroundlightblue",
+      },
+    };
   },
 };
 </script>

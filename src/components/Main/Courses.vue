@@ -1,8 +1,8 @@
 <template>
-  <div class="large-container">
-    <h1>Recent courses</h1>
+  <div :class="changeBgColor" class="large-container">
+    <h1>{{ info.title }}</h1>
     <!-- Categories -->
-    <div class="categories">
+    <div v-if="info.title === 'Recent courses'" class="categories">
       <span
         v-for="(category, index) in categories"
         :key="index"
@@ -10,53 +10,45 @@
         >{{ category }}</span
       >
     </div>
+    <div v-else>
+      <p class="desc">Discover our most popular courses for self learning.</p>
+    </div>
     <!-- Courses Grid -->
-    <div class="grid">
-      <div class="grid-element" v-for="(course, index) in courses" :key="index">
-        <!-- Img -->
-        <div class="image-container">
-          <img :src="course.img" :alt="course.title" />
-        </div>
-        <div class="course-text-info">
-          <!-- Text -->
-          <div class="course-text">
-            <p class="category">{{ course.category }} ></p>
-            <h3>{{ course.title }}</h3>
-          </div>
-          <!-- Divider -->
-          <hr />
-          <!-- Info -->
-          <div class="course-info">
-            <!-- Left -->
-            <div>
-              <div v-if="course.hours" class="hours">
-                <i class="fa-solid fa-clock"></i> {{ course.hours }} hours
-              </div>
-              <div v-if="course.stars">
-                <span class="stars">{{ displayStars }}</span> {{ course.stars }}
-              </div>
-            </div>
-            <!-- Right -->
-            <div>
-              <div v-if="course.free" class="free">Free</div>
-              <div v-if="course.price_final" class="price">
-                <span v-if="course.price_discount" class="discount"
-                  >${{ course.price_discount }}</span
-                >
-                <span class="final">${{ course.price_final }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div v-if="info.title === 'Recent courses'" class="grid">
+      <SingleCourse
+        v-for="(course, index) in courses"
+        :key="index"
+        :course="course"
+      />
+    </div>
+    <div v-else class="grid">
+      <SingleCourse
+        v-for="(course, index) in filteredCourses"
+        :key="index"
+        :course="course"
+      />
+    </div>
+    <a v-if="info.title === 'Recent courses'" class="btn">Show All</a>
+    <div v-else class="slider">
+      <div>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
-    <a class="btn">Show All</a>
   </div>
 </template>
 
 <script>
+import SingleCourse from "./Courses/SingleCourse.vue";
+
 export default {
   name: "CoursesDiv",
+  components: {
+    SingleCourse,
+  },
+  props: ["info"],
   data() {
     return {
       categories: [
@@ -158,8 +150,11 @@ export default {
     };
   },
   computed: {
-    displayStars() {
-      return "★★★★★";
+    changeBgColor() {
+      return this.info.title === "Popular courses" ? "bg-blue" : "";
+    },
+    filteredCourses() {
+      return this.courses.slice(0, 6);
     },
   },
 };
@@ -168,6 +163,10 @@ export default {
 <style scoped lang="scss">
 @import "../../assets/style/style.scss";
 
+.bg-blue {
+  background-color: $backgroundlightblue;
+}
+
 .large-container {
   padding: 6rem 0;
   text-align: center;
@@ -175,6 +174,10 @@ export default {
 }
 
 h1 {
+  margin-bottom: 1rem;
+}
+
+.desc {
   margin-bottom: 3rem;
 }
 
@@ -203,81 +206,50 @@ h1 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+}
 
-  .grid-element {
+.slider {
+  text-align: center;
+  @include flex(row, center, center);
+
+  div {
+    @include flex(row, center, center);
+    padding: 1rem 1.2rem;
+    background-color: white;
     border: 1px solid $anthensgray;
-    text-align: left;
-    transition: box-shadow 0.5s;
     &:hover {
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
+      background-color: $william;
+      color: white;
       cursor: pointer;
     }
-
-    .image-container {
-      height: 10rem;
-      position: relative;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    &:hover i {
+      opacity: 1;
     }
 
-    .course-text-info {
-      padding: 1.2rem;
-      @include flex(column, space-between, flex-start);
-      gap: 1rem;
-      height: 10.5rem;
-
-      .course-text {
-        .category {
-          font-size: 0.8rem;
-          opacity: 0.4;
-          margin-bottom: 0.6rem;
-        }
-
-        h3 {
-          font-size: 1rem;
-        }
-      }
-
-      hr {
-        width: 100%;
-        color: $anthensgray;
-      }
-
-      .course-info {
-        width: 100%;
-        @include flex(row, space-between, center);
-
-        .hours {
-          opacity: 0.5;
-        }
-
-        .stars {
-          font-size: 1.3rem;
-          color: goldenrod;
-        }
-
-        .free,
-        .final {
-          font-weight: bold;
-        }
-
-        .price {
-          position: relative;
-
-          .discount {
-            position: absolute;
-            top: -0.8rem;
-            right: 0;
-            font-size: 0.9rem;
-            color: grey;
-          }
-        }
-      }
+    i {
+      opacity: 0.5;
     }
+  }
+}
+
+@include xl {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@include md {
+  .categories {
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1rem;
+  }
+}
+
+@include sm {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 0 2rem;
   }
 }
 </style>
