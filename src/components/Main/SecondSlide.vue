@@ -53,12 +53,8 @@ export default {
   text-align: center;
   background: $backgroundlightblue;
 
-  p {
-    opacity: 0.6;
-  }
-
   img {
-    margin-top: -4rem;
+    margin-top: -15rem;
     width: 100%;
   }
 
