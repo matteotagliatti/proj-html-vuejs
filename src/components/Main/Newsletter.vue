@@ -86,6 +86,7 @@ export default {
 
         .input-field {
           width: 100%;
+          @include flex(row, flex-start, flex-start);
         }
       }
     }

@@ -57,4 +57,12 @@ export default {
     }
   }
 }
+
+@include sm {
+  .jumbotron {
+    .text-button {
+      width: 100%;
+    }
+  }
+}
 </style>

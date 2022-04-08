@@ -131,6 +131,7 @@ export default {
       width: 100%;
       height: 100%;
       margin-bottom: 0.5rem;
+      object-fit: cover;
     }
 
     .course-text {
@@ -158,6 +159,13 @@ export default {
       grid-column: span 1;
       grid-row: span 1;
     }
+  }
+}
+
+@include sm {
+  .grid-courses {
+    @include grid(1);
+    grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 }
 </style>
