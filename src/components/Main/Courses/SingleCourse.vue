@@ -57,6 +57,7 @@ export default {
   border: 1px solid $anthensgray;
   text-align: left;
   transition: box-shadow 0.5s;
+  background-color: white;
   &:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 12px 0px;
     cursor: pointer;

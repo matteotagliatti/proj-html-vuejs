@@ -1,40 +1,42 @@
 <template>
-  <div :class="changeBgColor" class="large-container">
-    <h1>{{ info.title }}</h1>
-    <!-- Categories -->
-    <div v-if="info.title === 'Recent courses'" class="categories">
-      <span
-        v-for="(category, index) in categories"
-        :key="index"
-        :class="index === 0 ? 'active' : ''"
-        >{{ category }}</span
-      >
-    </div>
-    <div v-else>
-      <p class="desc">Discover our most popular courses for self learning.</p>
-    </div>
-    <!-- Courses Grid -->
-    <div v-if="info.title === 'Recent courses'" class="grid">
-      <SingleCourse
-        v-for="(course, index) in courses"
-        :key="index"
-        :course="course"
-      />
-    </div>
-    <div v-else class="grid">
-      <SingleCourse
-        v-for="(course, index) in filteredCourses"
-        :key="index"
-        :course="course"
-      />
-    </div>
-    <a v-if="info.title === 'Recent courses'" class="btn">Show All</a>
-    <div v-else class="slider">
-      <div>
-        <i class="fa-solid fa-chevron-left"></i>
+  <div :class="changeBgColor">
+    <div class="large-container">
+      <h1>{{ info.title }}</h1>
+      <!-- Categories -->
+      <div v-if="info.title === 'Recent courses'" class="categories">
+        <span
+          v-for="(category, index) in categories"
+          :key="index"
+          :class="index === 0 ? 'active' : ''"
+          >{{ category }}</span
+        >
       </div>
-      <div>
-        <i class="fa-solid fa-chevron-right"></i>
+      <div v-else>
+        <p class="desc">Discover our most popular courses for self learning.</p>
+      </div>
+      <!-- Courses Grid -->
+      <div v-if="info.title === 'Recent courses'" class="grid">
+        <SingleCourse
+          v-for="(course, index) in courses"
+          :key="index"
+          :course="course"
+        />
+      </div>
+      <div v-else class="grid">
+        <SingleCourse
+          v-for="(course, index) in filteredCourses"
+          :key="index"
+          :course="course"
+        />
+      </div>
+      <a v-if="info.title === 'Recent courses'" class="btn">Show All</a>
+      <div v-else class="slider">
+        <div>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -170,7 +172,6 @@ export default {
 .large-container {
   padding: 6rem 0;
   text-align: center;
-  margin-bottom: 4rem;
 }
 
 h1 {
@@ -206,6 +207,7 @@ h1 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  padding: 0 2rem;
 }
 
 .slider {
@@ -249,7 +251,6 @@ h1 {
 @include sm {
   .grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    padding: 0 2rem;
   }
 }
 </style>
