@@ -4,6 +4,7 @@
     <GridDiv />
     <FirstSlide />
     <CoursesDiv />
+    <SecondSlide />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import JumbotronDiv from "./Jumbotron.vue";
 import GridDiv from "./Grid.vue";
 import FirstSlide from "./FirstSlide.vue";
 import CoursesDiv from "./Courses.vue";
+import SecondSlide from "./SecondSlide.vue";
 
 export default {
   name: "MainDiv",
@@ -20,6 +22,7 @@ export default {
     GridDiv,
     FirstSlide,
     CoursesDiv,
+    SecondSlide,
   },
 };
 </script>

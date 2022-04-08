@@ -50,9 +50,7 @@
         </div>
       </div>
     </div>
-    <div>
-      <a class="btn">Show All</a>
-    </div>
+    <a class="btn">Show All</a>
   </div>
 </template>
 
@@ -173,6 +171,7 @@ export default {
 .large-container {
   padding: 6rem 0;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 h1 {
