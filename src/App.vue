@@ -65,14 +65,18 @@ h3 {
 
 .large-container {
   max-width: 1600px;
-  min-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .container {
   max-width: 1100px;
-  min-width: 900px;
   margin: 0 auto;
+}
+
+@include xl {
+  .container {
+    padding: 0 2rem;
+  }
 }
 </style>

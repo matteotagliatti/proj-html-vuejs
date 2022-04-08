@@ -114,7 +114,7 @@ export default {
   }
 
   .login-signup {
-    @include flex(row, center, center);
+    @include flex(row, space-between, center);
     gap: 1.5rem;
     color: $denim;
 
@@ -122,6 +122,48 @@ export default {
       color: $denim;
       display: flex;
       gap: 0.5rem;
+    }
+  }
+}
+
+@include xl {
+  .bottom-header {
+    .cat-search {
+      .category {
+        display: none;
+      }
+    }
+
+    .icons-text {
+      display: none;
+    }
+
+    .login-signup {
+      .fa-bookmark {
+        display: none;
+      }
+    }
+  }
+}
+
+@include lg {
+  .bottom-header {
+    .cat-search {
+      .input {
+        input {
+          width: 10rem;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .bottom-header {
+    .cat-search {
+      .input {
+        display: none;
+      }
     }
   }
 }

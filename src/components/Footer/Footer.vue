@@ -174,4 +174,16 @@ footer {
     }
   }
 }
+
+@include md {
+  footer {
+    .container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .column {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
 </style>

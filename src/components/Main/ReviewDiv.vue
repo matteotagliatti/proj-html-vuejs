@@ -29,6 +29,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../../assets/style/style.scss";
+
 .review {
   background-image: url("../../assets/img/brooke-cagle-224821-unsplash-1-1920x700.jpg");
   background-position: center;
@@ -62,6 +64,16 @@ export default {
         right: -1.5rem;
         top: 44%;
         color: white;
+      }
+    }
+  }
+}
+
+@include md {
+  .review {
+    .container {
+      div {
+        width: 100%;
       }
     }
   }

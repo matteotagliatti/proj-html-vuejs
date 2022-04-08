@@ -139,4 +139,12 @@ export default {
     }
   }
 }
+
+@include xl {
+  .top-header {
+    ul {
+      display: none;
+    }
+  }
+}
 </style>

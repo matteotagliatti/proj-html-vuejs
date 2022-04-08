@@ -145,4 +145,21 @@ export default {
     grid-row: span 2;
   }
 }
+
+@include md {
+  .grid-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .grid-courses {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    height: 35rem;
+
+    .span-2 {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+}
 </style>

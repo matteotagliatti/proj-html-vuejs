@@ -71,4 +71,17 @@ export default {
     }
   }
 }
+
+@include md {
+  .newsletter {
+    .container {
+      flex-direction: column;
+
+      .text,
+      .input {
+        width: 100%;
+      }
+    }
+  }
+}
 </style>

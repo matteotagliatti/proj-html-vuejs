@@ -65,4 +65,30 @@ export default {
     }
   }
 }
+
+@include xl {
+  .slide {
+    .large-container {
+      .single-slide {
+        padding: 2rem;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .slide {
+    .large-container {
+      flex-direction: column;
+
+      .single-slide {
+        margin: 0 2rem;
+      }
+    }
+  }
+}
 </style>

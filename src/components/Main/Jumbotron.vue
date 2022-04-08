@@ -49,4 +49,12 @@ export default {
     }
   }
 }
+
+@include md {
+  .jumbotron {
+    .image {
+      display: none;
+    }
+  }
+}
 </style>

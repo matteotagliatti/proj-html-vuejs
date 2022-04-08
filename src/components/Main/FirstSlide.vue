@@ -27,6 +27,7 @@ export default {
 
 .slide {
   background-image: url("../../assets/img/Untitled-1-1-1-1-1.png");
+  background-color: $backgroundlightblue;
   background-position: center;
   padding: 6rem 0;
 
@@ -37,6 +38,16 @@ export default {
 
     p {
       opacity: 0.7;
+    }
+  }
+}
+
+@include md {
+  .slide {
+    background-image: none;
+
+    .text {
+      width: 100%;
     }
   }
 }

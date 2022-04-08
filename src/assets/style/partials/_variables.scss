@@ -24,3 +24,12 @@ $muddywaters: #b89062;
 $thatch: #b9a59c;
 $eastbay: #3b5182;
 $shark: #2d2e34;
+
+// Breakpoints
+$breakpoints: (
+  "xs": 0,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+);

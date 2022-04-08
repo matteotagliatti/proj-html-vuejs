@@ -54,7 +54,7 @@ export default {
   background: $backgroundlightblue;
 
   img {
-    margin-top: -15rem;
+    margin-top: -10rem;
     width: 100%;
   }
 
@@ -81,6 +81,44 @@ export default {
       p {
         text-transform: uppercase;
       }
+    }
+  }
+}
+
+@include xl {
+  .second-slide {
+    img {
+      margin-top: -5rem;
+    }
+  }
+}
+
+@include lg {
+  .second-slide {
+    .para {
+      padding: 0 5rem;
+    }
+
+    .numbers {
+      div {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
+
+@include md {
+  .second-slide {
+    img {
+      margin-top: 0;
+    }
+
+    .para {
+      padding: 0;
+    }
+
+    .numbers {
+      flex-direction: column;
     }
   }
 }
