@@ -205,8 +205,7 @@ h1 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  @include grid(6);
   gap: 2rem;
   margin-bottom: 3rem;
   padding: 0 2rem;
@@ -236,11 +235,13 @@ h1 {
   }
 }
 
-@include xl {
+@include xxl {
   .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @include grid(3);
   }
+}
 
+@include xl {
   .categories {
     padding: 0 2rem;
     gap: 1rem;
@@ -249,7 +250,7 @@ h1 {
 
 @include md {
   .grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    @include grid(1);
   }
 
   .categories {

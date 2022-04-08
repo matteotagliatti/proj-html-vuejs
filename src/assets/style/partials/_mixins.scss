@@ -5,6 +5,11 @@
   align-items: $align;
 }
 
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+}
+
 // Breakpoints
 @mixin sm {
   @media (max-width: map-get($breakpoints, "sm")) {

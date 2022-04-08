@@ -93,8 +93,7 @@ footer {
   padding: 4rem 0;
 
   .container {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @include grid(4);
     column-gap: 2rem;
 
     .column {
@@ -178,7 +177,7 @@ footer {
 @include lg {
   footer {
     .container {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      @include grid(2);
 
       .column {
         margin-bottom: 2rem;

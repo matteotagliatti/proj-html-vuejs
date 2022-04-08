@@ -88,8 +88,7 @@ export default {
 @import "../../assets/style/style.scss";
 
 .grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @include grid(3);
   gap: 2rem;
   margin-bottom: 6rem;
 
@@ -120,8 +119,7 @@ export default {
 }
 
 .grid-courses {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @include grid(3);
   grid-template-rows: repeat(3, minmax(0, 1fr));
   row-gap: 4rem;
   column-gap: 2rem;
@@ -148,11 +146,11 @@ export default {
 
 @include md {
   .grid-3 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    @include grid(1);
   }
 
   .grid-courses {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @include grid(2);
     grid-template-rows: repeat(3, minmax(0, 1fr));
     height: 35rem;
 
