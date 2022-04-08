@@ -5,6 +5,7 @@
     <FirstSlide />
     <CoursesDiv />
     <SecondSlide />
+    <NewsletterDiv />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import GridDiv from "./Grid.vue";
 import FirstSlide from "./FirstSlide.vue";
 import CoursesDiv from "./Courses.vue";
 import SecondSlide from "./SecondSlide.vue";
+import NewsletterDiv from "./NewsletterDiv.vue";
 
 export default {
   name: "MainDiv",
@@ -23,6 +25,7 @@ export default {
     FirstSlide,
     CoursesDiv,
     SecondSlide,
+    NewsletterDiv,
   },
 };
 </script>
